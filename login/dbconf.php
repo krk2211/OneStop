@@ -1,8 +1,8 @@
 <?php
 //DATABASE CONNECTION VARIABLES
-$host = "localhost"; // Host name
-$username = "root"; // Mysql username
-$password = "root"; // Mysql password
+$host = "athena.nitc.ac.in/"; // Host name
+$username = "r2m"; // Mysql username
+$password = "abcd1234"; // Mysql password
 $db_name = "onestop"; // Database name
 
 //DO NOT CHANGE BELOW THIS LINE UNLESS YOU CHANGE THE NAMES OF THE MEMBERS AND LOGINATTEMPTS TABLES
