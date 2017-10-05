@@ -16,3 +16,5 @@ TO-Dos
 4. Design a shopping cart page.
 
 5. Design a user login.
+
+6. Add the session require and shopping cart hyperlink to all files.
