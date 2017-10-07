@@ -8,18 +8,21 @@
 
 3. Edit the dbconf.php file.
 
-4. ```sql
+4. Create the products table.
+```sql
 CREATE TABLE IF NOT EXISTS `tblproduct` (
-  `id` int(8) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `code` varchar(255) NOT NULL,
-  `image` text NOT NULL,
-  `price` double(10,2) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `product_code` (`code`)
-)```
+`id` int(8) NOT NULL AUTO_INCREMENT,
+`name` varchar(255) NOT NULL,
+`code` varchar(255) NOT NULL,
+`image` text NOT NULL,
+`price` double(10,2) NOT NULL,
+PRIMARY KEY (`id`),
+UNIQUE KEY `product_code` (`code`)
+)
+```
 
-5. ```sql
+5.Create a table of the users.
+```sql
 CREATE TABLE `members` (
   `id` char(23) NOT NULL,
   `username` varchar(65) NOT NULL DEFAULT '',
@@ -31,9 +34,11 @@ CREATE TABLE `members` (
   UNIQUE KEY `username_UNIQUE` (`username`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;```
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+```
 
-6. ```sql
+6. Create a table to keep track of the Login Attempts.
+```sql
 CREATE TABLE `loginAttempts` (
   `IP` varchar(20) NOT NULL,
   `Attempts` int(11) NOT NULL,
@@ -41,7 +46,8 @@ CREATE TABLE `loginAttempts` (
   `Username` varchar(65) DEFAULT NULL,
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;```
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+```
 
 7. Use `<?php require "login/loginheader.php"; ?>` To require session usage.
 
