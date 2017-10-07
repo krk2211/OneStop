@@ -1,12 +1,12 @@
 # OneStop
-1.  ##Clone the Repository (recursively to include PHP-Mailer submodule)
-    $ git clone https://github.com/krk2211/OneStop.git
+1.  Clone the Repository (recursively to include PHP-Mailer submodule)
+    '''$ git clone https://github.com/krk2211/OneStop.git'''
 
-2. ##After setting up the database, run the website from Start1.php.
+2. After setting up the database, run the website from Start1.php.
 
-3. ##Edit the dbconf.php file.
+3. Edit the dbconf.php file.
 
-4. CREATE TABLE IF NOT EXISTS `tblproduct` (
+4. '''CREATE TABLE IF NOT EXISTS `tblproduct` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `code` varchar(255) NOT NULL,
@@ -14,9 +14,9 @@
   `price` double(10,2) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `product_code` (`code`)
-)
+)'''
 
-5. CREATE TABLE `members` (
+5. '''CREATE TABLE `members` (
   `id` char(23) NOT NULL,
   `username` varchar(65) NOT NULL DEFAULT '',
   `password` varchar(65) NOT NULL DEFAULT '',
@@ -27,7 +27,7 @@
   UNIQUE KEY `username_UNIQUE` (`username`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;'''
 
 6. CREATE TABLE `loginAttempts` (
   `IP` varchar(20) NOT NULL,
