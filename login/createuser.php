@@ -7,6 +7,7 @@ $newid = uniqid(rand(), false);
 $newuser = $_POST['newuser'];
 $newpw = password_hash($_POST['password1'], PASSWORD_DEFAULT);
 $pw1 = $_POST['password1'];
+$fname = $_POST['fname'];
 $pw2 = $_POST['password2'];
 
     //Enables moderator verification (overrides user self-verification emails)
@@ -40,7 +41,7 @@ if ($pw1 != $pw2) {
 
         $a = new NewUserForm;
 
-        $response = $a->createUser($newuser, $newid, $newemail, $newpw);
+        $response = $a->createUser($newuser, $newid, $newemail, $newpw, $fname);
 
         //Success
         if ($response == 'true') {

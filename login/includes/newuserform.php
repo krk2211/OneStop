@@ -1,7 +1,7 @@
 <?php
 class NewUserForm extends DbConn
 {
-    public function createUser($usr, $uid, $email, $pw)
+    public function createUser($usr, $uid, $email, $pw, $fname)
     {
         try {
 
@@ -10,10 +10,13 @@ class NewUserForm extends DbConn
             // prepare sql and bind parameters
             $stmt = $db->conn->prepare("INSERT INTO ".$tbl_members." (id, username, password, email)
             VALUES (:id, :username, :password, :email)");
+            //$stmt = $db->conn->prepare("INSERT INTO ".$tbl_members." (id, username, password, email, fname)
+            //VALUES (:id, :username, :password, :email, :fname)");
             $stmt->bindParam(':id', $uid);
             $stmt->bindParam(':username', $usr);
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':password', $pw);
+            //$stmt->bindParam(':fname', $fname);
             $stmt->execute();
 
             $err = '';

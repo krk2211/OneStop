@@ -110,9 +110,13 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <header class="w3-container w3-xlarge">
 	  <br>
     <p class="w3-center">The One Stop for it all.</p>
+    <?php
+    echo "Welcome, " . $_SESSION['username'];
+
+    ?>
     <p class="w3-right">
-      <a href="login/logout.php"><i class="fa fa-shopping-cart w3-margin-right"></i></a>
-      <i class="fa fa-search"></i>
+      <a href="Cart.php"><i class="fa fa-shopping-cart w3-margin-right"></i></a>
+      <a href="login/logout.php"><i class="fa fa-search"></i></a>
     </p>
   </header>
 

@@ -62,7 +62,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
   <div class="w3-container w3-display-container w3-padding-16">
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-    <h3 class="w3-wide"><a href= "Start1.html"><img src = "img/one.png" id = "img0"></a></h3>
+    <h3 class="w3-wide"><a href= "Start1.php"><img src = "img/one.png" id = "img0"></a></h3>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
     <a href="mobile.html" class="w3-bar-item w3-button">Mobile Phones</a>
@@ -113,7 +113,23 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     </p>
   </header>
 
-  
+  <?php
+  $product_array = $db_handle->runQuery("SELECT * FROM tblproduct ORDER BY id ASC");
+  if (!empty($product_array)) {
+  foreach($product_array as $key=>$value){
+  ?>
+  <div class="product-item">
+  	<form method="post" action="index.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
+  	<div class="product-image"><img src="<?php echo $product_array[$key]["image"]; ?>"></div>
+  	<div><strong><?php echo $product_array[$key]["name"]; ?></strong></div>
+  	<div class="product-price"><?php echo "$".$product_array[$key]["price"]; ?></div>
+  	<div><input type="text" name="quantity" value="1" size="2" /><input type="submit" value="Add to cart" class="btnAddAction" /></div>
+  	</form>
+  </div>
+  <?php }} ?>
+
+
+
 
 
 </div>
