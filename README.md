@@ -1,5 +1,6 @@
 # OneStop
-1. Clone the Repository using the command: git clone https://github.com/krk2211/OneStop.git
+1. Clone the Repository using the command:
+$ git clone https://github.com/krk2211/OneStop.git
 
 2. After setting up the database, run the website from Start1.php.
 
