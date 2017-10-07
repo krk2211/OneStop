@@ -54,7 +54,7 @@ CREATE TABLE `loginAttempts` (
 7. Use `<?php require "login/loginheader.php"; ?>` To require session usage.
 
 
-##TO-Dos
+## TO-Dos
 
 - [ ] \(Optional) Replace the Title in every file with OneStop.
 
