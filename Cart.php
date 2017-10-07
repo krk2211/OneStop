@@ -1,3 +1,6 @@
+<?php require "login/loginheader.php"; ?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -14,6 +17,29 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 </style>
 <head>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        table {
+            width:100%;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+        table#t01 tr:nth-child(even) {
+            background-color: #eee;
+        }
+        table#t01 tr:nth-child(odd) {
+           background-color:#fff;
+        }
+        table#t01 th {
+            background-color: black;
+            color: white;
+        }
+    </style>
 <title>B.I.T.</title>
 </head>
 <body>
@@ -113,21 +139,43 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     </p>
   </header>
 
-  <?php
-  $product_array = $db_handle->runQuery("SELECT * FROM tblproduct ORDER BY id ASC");
-  if (!empty($product_array)) {
-  foreach($product_array as $key=>$value){
-  ?>
-  <div class="product-item">
-  	<form method="post" action="index.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
-  	<div class="product-image"><img src="<?php echo $product_array[$key]["image"]; ?>"></div>
-  	<div><strong><?php echo $product_array[$key]["name"]; ?></strong></div>
-  	<div class="product-price"><?php echo "$".$product_array[$key]["price"]; ?></div>
-  	<div><input type="text" name="quantity" value="1" size="2" /><input type="submit" value="Add to cart" class="btnAddAction" /></div>
-  	</form>
-  </div>
-  <?php }} ?>
 
+
+  <?php
+  echo "Welcome, " . $_SESSION['username'];
+
+  ?>
+
+<!-- <?php
+  $maxcols = 2;
+    $i = 0;
+
+    //Open the table and its first row
+    echo "<table>";
+    echo "<tr>";
+    while ($image = mysql_fetch_assoc($images_rs)) {
+
+        if ($i == $maxcols) {
+            $i = 0;
+            echo "</tr><tr>";
+        }
+
+        echo "<td><img src=\"" . $image['src'] . "\" /></td>";
+
+        $i++;
+
+    }
+
+    //Add empty <td>'s to even up the amount of cells in a row:
+    while ($i <= $maxcols) {
+        echo "<td>&nbsp;</td>";
+        $i++;
+    }
+
+    //Close the table row and the table
+    echo "</tr>";
+    echo "</table>";
+?> -->
 
 
 
