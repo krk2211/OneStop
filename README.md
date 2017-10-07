@@ -1,4 +1,6 @@
 # OneStop
+
+##Follow the setup instructions below.
 1.  Clone the Repository (recursively to include PHP-Mailer submodule)
     ```
     $ git clone https://github.com/krk2211/OneStop.git
@@ -52,16 +54,18 @@ CREATE TABLE `loginAttempts` (
 7. Use `<?php require "login/loginheader.php"; ?>` To require session usage.
 
 
-TO-Dos
+##TO-Dos
 
-1. Replace the Title in every file with OneStop.
+- [ ] \(Optional) Replace the Title in every file with OneStop.
 
-2. In the php folder, in all the files, add "../" to the links to About, Registration and Contact Us.
+- [ ] \(Optional) In the php folder, in all the files, add "../" to the links to About, Registration and Contact Us.
 
-3. Create pages for About, Registration and Contact Us.
+- [ ] Create pages for About, Registration and Contact Us.
 
-4. Design a shopping cart page.
+- [x] Design a shopping cart page.
 
-5. Replace the home icon with Start1.php
+- [ ] Add the contents of shopping cart page.
 
-6. Add the session require and shopping cart hyperlink to all files.
+- [x] Replace the home icon with Start1.php
+
+- [ ] Add the session require and shopping cart hyperlink to all files.
