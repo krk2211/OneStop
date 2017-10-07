@@ -42,7 +42,7 @@ $GLOBALS['quantity1']=1;
 //$sql = "INSERT INTO checkout VALUES ('".$name1."'," . $price1.", ".$quantity1.")";
 // echo $_POST['name'];
 // echo "string";
-// echo "Welcome, " . $_SESSION['username'];
+ echo "Welcome, " . $_SESSION['username'];
 // echo "string";
 // echo $names;
 
