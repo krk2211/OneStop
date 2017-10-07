@@ -1,10 +1,10 @@
 # OneStop
-###1.  Clone the Repository (recursively to include PHP-Mailer submodule)
+1.  ##Clone the Repository (recursively to include PHP-Mailer submodule)
     $ git clone https://github.com/krk2211/OneStop.git
 
-2. After setting up the database, run the website from Start1.php.
+2. ##After setting up the database, run the website from Start1.php.
 
-3. Edit the dbconf.php file.
+3. ##Edit the dbconf.php file.
 
 4. CREATE TABLE IF NOT EXISTS `tblproduct` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
