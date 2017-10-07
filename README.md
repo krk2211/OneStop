@@ -1,5 +1,5 @@
 # OneStop
-1. ### Clone the Repository (recursively to include PHP-Mailer submodule)
+###1.  Clone the Repository (recursively to include PHP-Mailer submodule)
     $ git clone https://github.com/krk2211/OneStop.git
 
 2. After setting up the database, run the website from Start1.php.
