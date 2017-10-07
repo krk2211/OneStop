@@ -8,7 +8,8 @@
 
 3. Edit the dbconf.php file.
 
-4. ```CREATE TABLE IF NOT EXISTS `tblproduct` (
+4. ```sql
+CREATE TABLE IF NOT EXISTS `tblproduct` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `code` varchar(255) NOT NULL,
@@ -18,7 +19,8 @@
   UNIQUE KEY `product_code` (`code`)
 )```
 
-5. ```CREATE TABLE `members` (
+5. ```sql
+CREATE TABLE `members` (
   `id` char(23) NOT NULL,
   `username` varchar(65) NOT NULL DEFAULT '',
   `password` varchar(65) NOT NULL DEFAULT '',
@@ -31,7 +33,8 @@
   UNIQUE KEY `email_UNIQUE` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;```
 
-6. ```CREATE TABLE `loginAttempts` (
+6. ```sql
+CREATE TABLE `loginAttempts` (
   `IP` varchar(20) NOT NULL,
   `Attempts` int(11) NOT NULL,
   `LastLogin` datetime NOT NULL,
