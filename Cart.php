@@ -162,8 +162,20 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
           die("Connection failed: " . $conn->connect_error);
       }
 
+
+
       $get_stu="select * from checkout";
       $run_stu=mysqli_query($con,$get_stu);
+      echo "
+      <table>
+          <tr>
+            <th>ITEM</th>
+            <th>PRICE</th>
+            <th>USER</th>
+          </tr>
+
+
+      ";
       while($row_stu=mysqli_fetch_array($run_stu))
       {
       $name=$row_stu['name'];
@@ -171,22 +183,17 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
       $quantity=$row_stu['price'];
       $user=$row_stu['user'];
 
-      echo "<div>
-
-      <table id="t01">
+      echo "
       <tr>
-        <th>ITEM : $name</th>
-        <th>PRICE : $price Rs.</th>
-        <th>USER : $user </th>
+        <td>$name</td>
+        <td>$price Rs.</td>
+        <td>$user </td>
       </tr>
 
-    </table>
 
-
-      X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X
-
-      </div>";
+        ";
       }
+      echo "</table>";
 
 
       $conn->close();
