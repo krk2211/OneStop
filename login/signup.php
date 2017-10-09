@@ -32,9 +32,14 @@
         <input name="password2" id="password2" type="password" class="form-control" placeholder="Repeat Password">
 
         <button name="Submit" id="submit" class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+        <br />
+        <br />
 
         <div id="message"></div>
       </form>
+
+      <a href="../Start1.php"><button class="btn btn-lg btn-primary btn-block" type="submit">Go Back to login page</button></a>
+
 
     </div> <!-- /container -->
 
