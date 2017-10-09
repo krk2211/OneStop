@@ -142,10 +142,104 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 
   <?php
+  if ($_SESSION['username']=='Kiran') {
+
+
+
+
+      echo "Welcome, " . $_SESSION['username'];
+
+      $servername = "localhost";
+      $username = "root";
+      $password = "root";
+      $dbname = "onestop";
+
+      // Create connection
+      $con = mysqli_connect($servername, $username, $password, $dbname);
+
+      // Check connection
+      if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+      }
+
+      $get_stu="select * from checkout";
+      $run_stu=mysqli_query($con,$get_stu);
+      while($row_stu=mysqli_fetch_array($run_stu))
+      {
+      $name=$row_stu['name'];
+      $price = $row_stu['quantity'];
+      $quantity=$row_stu['price'];
+      $user=$row_stu['user'];
+
+      echo "<div>
+
+
+
+      <p>ITEM : $name</p>
+
+      <p>PRICE : $price Rs.</p>
+
+      <p>USER : $user </p>
+
+      X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X
+
+      </div>";
+      }
+
+
+      $conn->close();
+
+  }
+
+  else{
+
+
   echo "Welcome, " . $_SESSION['username'];
-  
+
+  $servername = "localhost";
+  $username = "root";
+  $password = "root";
+  $dbname = "onestop";
+
+  // Create connection
+  $con = mysqli_connect($servername, $username, $password, $dbname);
+
+  // Check connection
+  if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+  }
+
+  $get_stu="select * from checkout where user='".$_SESSION['username']."'";
+  $run_stu=mysqli_query($con,$get_stu);
+  while($row_stu=mysqli_fetch_array($run_stu))
+  {
+  $name=$row_stu['name'];
+  $price = $row_stu['quantity'];
+  $quantity=$row_stu['price'];
+
+  echo "<div>
+
+
+
+  <p>ITEM : $name</p>
+
+  <p>PRICE : $price Rs.</p>
+
+  X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X
+
+  </div>";
+  }
+
+
+  $conn->close();
+
+  }
+
+
 
   ?>
+
+
 
 <!-- <?php
   $maxcols = 2;
