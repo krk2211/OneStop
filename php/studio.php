@@ -47,7 +47,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     }
 
     function add()
-    {
+    {   alert("Your Item has been added to cart!");
         $.post("buy.php",
         {   name: 'studio'                            //rep name
         },function(data,status)
@@ -163,7 +163,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
     <p>NAME  : Beats Studio</p>
 
-    
+
 
     <p>PRICE : $price Rs.</p>
 
