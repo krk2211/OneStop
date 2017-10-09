@@ -148,6 +148,8 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 
       echo "Welcome, " . $_SESSION['username'];
+      echo "\n";
+      echo "\n";
 
       $servername = "localhost";
       $username = "root";
@@ -204,6 +206,8 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 
   echo "Welcome, " . $_SESSION['username'];
+  echo "\n";
+  echo "\n";
 
   $servername = "localhost";
   $username = "root";
@@ -220,27 +224,38 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
   $get_stu="select * from checkout where user='".$_SESSION['username']."'";
   $run_stu=mysqli_query($con,$get_stu);
+  echo "
+  <table>
+      <tr>
+        <th>ITEM</th>
+        <th>PRICE</th>
+        <th>USER</th>
+      </tr>
+
+
+  ";
   while($row_stu=mysqli_fetch_array($run_stu))
   {
   $name=$row_stu['name'];
   $price = $row_stu['quantity'];
   $quantity=$row_stu['price'];
+  $user=$row_stu['user'];
 
-  echo "<div>
+  echo "
+  <tr>
+    <td>$name</td>
+    <td>$price Rs.</td>
+    <td>$user </td>
+  </tr>
 
 
-
-  <p>ITEM : $name</p>
-
-  <p>PRICE : $price Rs.</p>
-
-  X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X
-
-  </div>";
+    ";
   }
+  echo "</table>";
 
 
   $conn->close();
+
 
   }
 
