@@ -49,7 +49,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     }
 
     function add()
-    {
+    {   alert("Your Item has been added to cart!");
         $.post("buy.php",
         {   name: 'iphone'
         },function(data,status)
@@ -134,7 +134,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <h3 class="w3-wide">HERE'S ONESTOP THE ONE STOP FOR IT ALL</h3>
     <b></b>
     <br><br>
-    
+
 
     <img src = "../img/iphone.png" id = "img2">
     <br /><br />

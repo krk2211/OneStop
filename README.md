@@ -1,6 +1,6 @@
 # OneStop
 
-##Follow the setup instructions below.
+## Follow the setup instructions below.
 1.  Clone the Repository (recursively to include PHP-Mailer submodule)
     ```
     $ git clone https://github.com/krk2211/OneStop.git

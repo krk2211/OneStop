@@ -34,6 +34,8 @@ $GLOBALS['quantity1']=1;
 //echo "string";
 //echo $names;
 }
+//alert("Your Item has been added to cart!");
+
 
 //echo "string";
 
