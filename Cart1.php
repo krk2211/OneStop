@@ -169,6 +169,8 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
       $get_stu="select * from checkout";
       $run_stu=mysqli_query($con,$get_stu);
       echo "
+      <br />
+      <br />
       <table>
           <tr>
             <th>ITEM</th>
@@ -225,6 +227,8 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   $get_stu="select * from checkout where user='".$_SESSION['username']."'";
   $run_stu=mysqli_query($con,$get_stu);
   echo "
+  <br />
+  <br />
   <table>
       <tr>
         <th>ITEM</th>
