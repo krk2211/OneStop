@@ -19,6 +19,7 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
+echo "HELL";
 
 $conn->close();
 ?>
