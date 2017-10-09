@@ -155,8 +155,8 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 	  <br>
     <p class="w3-center">The One Stop for it all.</p>
     <p class="w3-right">
-      <i class="fa fa-shopping-cart w3-margin-right"></i>
-      <i class="fa fa-search"></i>
+      <a href="Cart.php"><i class="fa fa-shopping-cart w3-margin-right"></i></a>
+      <a href="login/logout.php">Logout</a>
     </p>
   </header>
 
@@ -165,12 +165,16 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <form action="del.php" method="get">
     <input type="submit" value="Clear Shopping cart!">
   </form>
+  <br /><br />
+  <form action="del.php" method="get">
+    <input type="submit" value="Buy Items!">
+  </form>
 
   <br /><br />
 
   <?php
   if ($_SESSION['username']=='Kiran') {
-      
+
 
       echo "Welcome, " . $_SESSION['username'];
       echo "\n";
