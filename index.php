@@ -17,7 +17,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 <head>
     <?php require "login/loginheader.php"; ?>
     <link rel="stylesheet" href="css/styles.css">
-<title>B.I.T.</title>
+<title>OneStop</title>
 </head>
 <body>
 
