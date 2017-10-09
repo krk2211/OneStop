@@ -6,9 +6,9 @@
     $ git clone https://github.com/krk2211/OneStop.git
     ```
 
-2. After setting up the database, run the website from Start1.php.
+2. Edit the dbconf.php file.
 
-3. Edit the dbconf.php file.
+3. After setting up the database following steps 4-9, run the website from Start1.php.
 
 4. Create the products table.
 ```sql
@@ -23,7 +23,7 @@ UNIQUE KEY `product_code` (`code`)
 )
 ```
 
-5.Create a table of the users.
+5. Create a table of the users.
 ```sql
 CREATE TABLE `members` (
   `id` char(23) NOT NULL,
@@ -51,12 +51,57 @@ CREATE TABLE `loginAttempts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ```
 
-7. Use `<?php require "login/loginheader.php"; ?>` To require session usage.
+7. Create the Shopping Cart.
+```sql
+CREATE TABLE `checkout` (
+  `name` varchar(15) NOT NULL,
+  `quantity` int(3) NOT NULL,
+  `price` int(10) NOT NULL,
+  `user` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+```
+8. Create table containing items.
+```sql
+CREATE TABLE `item` (
+  `name` varchar(15) NOT NULL,
+  `quantity` int(2) NOT NULL,
+  `price` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+```
+
+9. Add items to the table.
+```sql
+INSERT INTO `item` (`name`, `quantity`, `price`) VALUES
+('iphone', 10, 75000),
+('note', 5, 70000),
+('htc', 7, 53999),
+('one', 3, 27000),
+('mac', 4, 225000),
+('alien', 3, 155000),
+('razer', 6, 125000),
+('solo', 15, 33999),
+('hesh', 5, 15999),
+('at', 21, 10999),
+('sennheiser', 5, 21999),
+('qc25', 8, 39999),
+('qc35', 4, 49999),
+('studio', 7, 35999),
+('cx275', 13, 799),
+('xb50', 15, 1599),
+('sound', 11, 11999),
+('tab3', 18, 75999),
+('pro4', 12, 58999),
+('ipad4', 25, 125000),
+('samsung', 19, 559999),
+('sony', 21, 499999);
+```
+
+10. Use `<?php require "login/loginheader.php"; ?>` To require session usage.
 
 
 ## TO-Dos
 
-- [ ] \(Optional) Replace the Title in every file with OneStop.
+- [X] \(Optional) Replace the Title in every file with OneStop.
 
 - [ ] \(Optional) In the php folder, in all the files, add "../" to the links to About, Registration and Contact Us.
 
@@ -64,7 +109,7 @@ CREATE TABLE `loginAttempts` (
 
 - [x] Design a shopping cart page.
 
-- [ ] Add the contents of shopping cart page.
+- [X] Add the contents of shopping cart page.
 
 - [x] Replace the home icon with Start1.php
 
