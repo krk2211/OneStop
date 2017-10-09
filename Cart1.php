@@ -43,7 +43,46 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 <title>OneStop</title>
 </head>
 <body>
+    <script>
+    // Accordion
+    function myAccFunc() {
+        var x = document.getElementById("demoAcc");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
 
+    // Click on the "Jeans" link on page load to open the accordion for demo purposes
+    document.getElementById("myBtn").click();
+
+
+    // Script to open and close sidebar
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
+
+    function add()
+    {
+        $.post("del.php",
+        {
+        },function(data,status)
+        {
+            console.log(data+status);
+        }
+    );
+
+
+    }
+
+    </script>
 
 
 <br />
@@ -65,25 +104,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
         </div>
     </div>
 </div>
-<!-- <div id = "bar">
 
-    <a href="Hostel.html">Mobile Phones</a><br>
-    <br>
-    <a href="Home.html">Laptops</a><br>
-    <br>
-    <a href="Home.html">Tablets</a><br>
-    <br>
-    <a href="Home.html">Earphones</a><br>
-    <br>
-    <a href="Food.html">Headphones</a><br>
-    <br>
-    <a href="Food.html">Television</a><br>
-    <br>
-
-
-
-
-</div> -->
 
 <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
   <div class="w3-container w3-display-container w3-padding-16">
@@ -139,13 +160,17 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     </p>
   </header>
 
+  <br /><br />
+  <!-- <button class="btn btn-basic" onclick=add() >Buy Now</button> -->
+  <form action="del.php" method="get">
+    <input type="submit" value="Clear Shopping cart!">
+  </form>
 
+  <br /><br />
 
   <?php
   if ($_SESSION['username']=='Kiran') {
-
-
-
+      
 
       echo "Welcome, " . $_SESSION['username'];
       echo "\n";
@@ -344,32 +369,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 </div>
 </div>
 
-<script>
-// Accordion
-function myAccFunc() {
-  var x = document.getElementById("demoAcc");
-  if (x.className.indexOf("w3-show") == -1) {
-      x.className += " w3-show";
-  } else {
-      x.className = x.className.replace(" w3-show", "");
-  }
-}
 
-// Click on the "Jeans" link on page load to open the accordion for demo purposes
-document.getElementById("myBtn").click();
-
-
-// Script to open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
-
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-</script>
 
 </body>
 </html>
