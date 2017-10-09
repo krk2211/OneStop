@@ -165,7 +165,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
     <p>IN STOCK : $quantity</p>
 
-    <p>PRICE : $price Rs.</p>
+    
 
     X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X
 

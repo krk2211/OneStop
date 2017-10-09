@@ -16,7 +16,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 </style>
 <head>
     <link rel="stylesheet" href="styles.css">
-<title>B.I.T.</title>
+<title>OneStop</title>
 </head>
 <body>
 
@@ -163,7 +163,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
     <p>NAME  : Microsoft Surface Pro 4 </p>
 
-    <p>IN STOCK : $quantity</p>
+    
 
     <p>PRICE : $price Rs.</p>
 
